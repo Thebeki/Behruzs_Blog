@@ -20,9 +20,9 @@ class IntroductionView(ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ['id', 'title', 'created_on']
-    search_fields = ['id', '=title', 'created_on']
-    ordering_fields = ['id', 'title', 'created_on']
+    filterset_fields = ['id', 'title', 'yaratilgan_kun']
+    search_fields = ['id', '=title', 'yaratilgan_kun']
+    ordering_fields = ['id', 'title', 'yaratilgan_kun']
 
 class ListRequestsView(RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
